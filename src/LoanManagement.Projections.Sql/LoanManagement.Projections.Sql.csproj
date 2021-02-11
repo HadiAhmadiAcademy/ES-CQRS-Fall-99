@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>dotnet-LoanManagement.Projections.Sql-B65804B9-D46E-45B1-B575-A951866B0403</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="autofac" Version="6.1.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="microsoft.entityframeworkcore" Version="5.0.1" />
+    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="5.0.1" />
+    <PackageReference Include="microsoft.entityframeworkcore.tools" Version="5.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.1" />
+    <PackageReference Include="eventstore.client" Version="5.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\framework\Framework.Core\Framework.Core.csproj" />
+    <ProjectReference Include="..\..\framework\Framework.Persistence.ES\Framework.Persistence.ES.csproj" />
+    <ProjectReference Include="..\LoanApplications.Domain.Contracts\LoanApplications.Domain.Contracts.csproj" />
+  </ItemGroup>
+</Project>
