@@ -5,18 +5,29 @@ using Xunit;
 
 namespace LoanApplications.Domain.Tests.Unit
 {
-    public class when_rejecting_a_loan_application
+    public class when_rejecting_a_loan_application : Specification<LoanApplication>
     {
-        [Fact]
-        public void loan_application_gets_rejected()
+        protected override LoanApplication Given()
         {
-            var loanApplication = new LoanApplication(1, 20, 2000, "for buying a new laptop");
-            loanApplication.ClearUncommittedEvents();
+            return new LoanApplication(1, 20, 2000, "for buying a new laptop");
+        }
 
-            loanApplication.Reject("because i said so");
-
-            var @event = new LoanApplicationRejected(loanApplication.Id.Value, "because i said so");
-            loanApplication.ShouldOnlyContainDomainEvent(@event);
+        protected override void When()
+        {
+            sut.Reject("because i said so");
+        }
+        protected override void Then()
+        {
+            var @event = new LoanApplicationRejected(sut.Id.Value, "because i said so");
+            sut.ShouldOnlyContainDomainEvent(@event);
         }
     }
+
+    // Scenario : rejecting a loan application
+    // Given
+        //  Loan Requested with data ....
+    //  When
+        //  Reject
+    //  Then
+        //LoanApplicationRejected
 }
