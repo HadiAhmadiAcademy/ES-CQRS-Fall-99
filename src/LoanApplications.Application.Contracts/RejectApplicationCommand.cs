@@ -7,5 +7,10 @@ namespace LoanApplications.Application.Contracts
     {
         public Guid LoanApplicationId { get; set; }
         public string Reason { get; set; }
+
+        public override string ToString()
+        {
+            return $"Rejecting the application with id '{LoanApplicationId}' because of '{Reason}'";
+        }
     }
 }

@@ -9,12 +9,17 @@
   <ItemGroup>
     <PackageReference Include="fluentassertions" Version="5.10.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="nsubstitute" Version="4.2.2" />
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     <PackageReference Include="coverlet.collector" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\framework\Framework.Application\Framework.Application.csproj" />
+    <ProjectReference Include="..\..\framework\Framework.Domain\Framework.Domain.csproj" />
+    <ProjectReference Include="..\..\src\LoanApplications.Application.Contracts\LoanApplications.Application.Contracts.csproj" />
+    <ProjectReference Include="..\..\src\LoanApplications.Application\LoanApplications.Application.csproj" />
     <ProjectReference Include="..\..\src\LoanApplications.Domain\LoanApplications.Domain.csproj" />
   </ItemGroup>
 

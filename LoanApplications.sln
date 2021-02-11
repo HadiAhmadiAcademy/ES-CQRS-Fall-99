@@ -43,7 +43,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanManagement.Projections.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Core", "framework\Framework.Core\Framework.Core.csproj", "{9DBDCA52-3D37-4E61-8733-734847A5248B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanApplications.Domain.Tests.Unit", "test\LoanApplications.Domain.Tests.Unit\LoanApplications.Domain.Tests.Unit.csproj", "{A81DBE19-6612-4001-8F86-4B65F18680CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanApplications.Tests.Unit", "test\LoanApplications.Tests.Unit\LoanApplications.Tests.Unit.csproj", "{982C726D-5B78-4EFB-B160-A43379F81CE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,10 +95,10 @@ Global
 		{9DBDCA52-3D37-4E61-8733-734847A5248B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DBDCA52-3D37-4E61-8733-734847A5248B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DBDCA52-3D37-4E61-8733-734847A5248B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A81DBE19-6612-4001-8F86-4B65F18680CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A81DBE19-6612-4001-8F86-4B65F18680CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A81DBE19-6612-4001-8F86-4B65F18680CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A81DBE19-6612-4001-8F86-4B65F18680CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{982C726D-5B78-4EFB-B160-A43379F81CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{982C726D-5B78-4EFB-B160-A43379F81CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{982C726D-5B78-4EFB-B160-A43379F81CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{982C726D-5B78-4EFB-B160-A43379F81CE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -122,7 +122,7 @@ Global
 		{B1B7D6EF-E6CC-4E1C-B730-4E85D69BCA45} = {9912810C-F0BD-47CA-BDF1-3C18A7D89C61}
 		{F2FD44ED-2D92-4E14-A35B-8738838B12C5} = {E4E54EA4-45C8-4767-87BC-85D158FACDE6}
 		{9DBDCA52-3D37-4E61-8733-734847A5248B} = {798B2DC7-67CE-4D08-8D69-B47CA33A424F}
-		{A81DBE19-6612-4001-8F86-4B65F18680CE} = {1EFC824F-F519-41D0-B632-EB8A6B120B3E}
+		{982C726D-5B78-4EFB-B160-A43379F81CE9} = {1EFC824F-F519-41D0-B632-EB8A6B120B3E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {92165CFB-450D-45BA-8981-FC385EE22A0F}

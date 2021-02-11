@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Framework.Application
 {
-    public interface ICommandHandler<T> where T : ICommand
+    public interface ICommandHandler<in T> where T : ICommand
     {
         Task Handle(T command);
     }
