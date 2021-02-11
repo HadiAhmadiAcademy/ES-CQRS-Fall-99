@@ -28,6 +28,8 @@ namespace LoanApplications.Tests.Unit.Framework
         [Fact]
         public void Test()
         {
+            //TODO: cleaning up
+
             _testOutput.WriteLine($"Scenario : {this.GetType().Name.Replace("_", " ")}");
 
             var givenEvents = Given().ToList();
