@@ -10,6 +10,7 @@ namespace LoanApplications.Domain.Model.LoanApplications
         public int Amount { get;  set; }
         public string Description { get;  set; }
         public int Version { get;  set; }
+        public long State { get; set; }     //TODO: this is just a test
         //public LoanApplicationState State { get; set; }     //TODO: this is just a test
     }
 }

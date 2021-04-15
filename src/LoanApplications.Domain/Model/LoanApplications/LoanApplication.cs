@@ -33,5 +33,9 @@ namespace LoanApplications.Domain.Model.LoanApplications
             else
                 throw new InvalidStateException(_state, nameof(Accept));
         }
+        public LoanApplicationSnapshot GetSnapshot()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

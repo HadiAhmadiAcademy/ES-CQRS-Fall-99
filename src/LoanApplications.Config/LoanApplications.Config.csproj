@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\framework\Framework.Application\Framework.Application.csproj" />
+    <ProjectReference Include="..\..\framework\Framework.Core\Framework.Core.csproj" />
+    <ProjectReference Include="..\..\framework\Framework.Domain\Framework.Domain.csproj" />
+    <ProjectReference Include="..\..\framework\Framework.Persistence.ES\Framework.Persistence.ES.csproj" />
+    <ProjectReference Include="..\LoanApplications.Application.Contracts\LoanApplications.Application.Contracts.csproj" />
+    <ProjectReference Include="..\LoanApplications.Application\LoanApplications.Application.csproj" />
+    <ProjectReference Include="..\LoanApplications.Domain.Contracts\LoanApplications.Domain.Contracts.csproj" />
+    <ProjectReference Include="..\LoanApplications.Domain\LoanApplications.Domain.csproj" />
+    <ProjectReference Include="..\LoanApplications.Persistence.ES\LoanApplications.Persistence.ES.csproj" />
+    <ProjectReference Include="..\LoanApplications.RestApi\LoanApplications.RestApi.csproj" />
+  </ItemGroup>
+
+</Project>

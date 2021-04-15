@@ -1,4 +1,5 @@
-﻿using Framework.Domain;
+﻿using System;
+using Framework.Domain;
 using LoanApplications.Domain.Contracts;
 using LoanApplications.Domain.Model.LoanApplications.States;
 
