@@ -25,5 +25,9 @@ namespace Framework.Domain
         {
             return EqualityComparer<T>.Default.GetHashCode(Value);
         }
+        public override string ToString()
+        {
+            return this.Value.ToString();
+        }
     }
 }

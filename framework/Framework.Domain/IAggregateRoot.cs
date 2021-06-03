@@ -9,5 +9,6 @@ namespace Framework.Domain
         IReadOnlyList<DomainEvent> GetUncommittedEvents();
         void ClearUncommittedEvents();
         void Apply(DomainEvent @event);
+        void Apply(ISnapshot snapshot);
     }
 }

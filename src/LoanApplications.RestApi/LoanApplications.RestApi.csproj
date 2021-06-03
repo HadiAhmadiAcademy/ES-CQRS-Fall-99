@@ -7,4 +7,9 @@
   <ItemGroup>
     <PackageReference Include="microsoft.aspnetcore.mvc" Version="2.2.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\framework\Framework.Application\Framework.Application.csproj" />
+    <ProjectReference Include="..\LoanApplications.Application.Contracts\LoanApplications.Application.Contracts.csproj" />
+  </ItemGroup>
 </Project>

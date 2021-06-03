@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
+using Framework.Application;
+using LoanApplications.Application.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LoanApplications.RestApi
@@ -9,10 +12,18 @@ namespace LoanApplications.RestApi
     [Route("api/[controller]")]
     public class LoanApplicationsController : ControllerBase
     {
-        [HttpPost]
-        public IActionResult Post()
+        private ICommandBus _bus;
+
+        public LoanApplicationsController(ICommandBus bus)
         {
-            return Ok("Response from post");
+            _bus = bus;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post(PlaceLoanApplicationCommand command)
+        {
+            await _bus.Dispatch(command);
+            return Ok();
         }
 
         [HttpPut("{id}/Status")]

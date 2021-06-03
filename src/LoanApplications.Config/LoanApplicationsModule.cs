@@ -1,6 +1,11 @@
 ﻿using System;
+using System.Linq;
 using Autofac;
 using Framework.Application;
+using LoanApplications.Application;
+using LoanApplications.Application.Contracts;
+using LoanApplications.Domain.Model.LoanApplications;
+using LoanApplications.Persistence.ES;
 
 namespace LoanApplications.Config
 {
@@ -8,26 +13,13 @@ namespace LoanApplications.Config
     {
         protected override void Load(ContainerBuilder builder)
         {
-            RegisterApplicationDependencies(builder);
-            RegisterFrameworkDependencies(builder);
+            builder.RegisterAssemblyTypes(typeof(LoanApplicationHandlers).Assembly)
+                .As(type => type.GetInterfaces()
+                    .Where(interfaceType => interfaceType.IsClosedTypeOf(typeof(ICommandHandler<>))))
+                .InstancePerLifetimeScope();
 
+            builder.RegisterType<LoanApplicationRepository>().As<ILoanApplicationRepository>().SingleInstance();
         }
 
-        //TODO: move this method to framework
-        private void RegisterFrameworkDependencies(ContainerBuilder builder)
-        {
-            //CommandBus => Singleton
-            //AggregateFactory => Singleton
-            //ISnapshotStore => ?
-            //IEventTypeResolver => Singleton
-            //IEventStoreConnection => Singleton
-            //IEventSourceRepository => Singleton
-        }
-
-        private void RegisterApplicationDependencies(ContainerBuilder builder)
-        {
-            //IRepositories => Singleton
-            //CommandHandler => Singleton
-        }
     }
 }

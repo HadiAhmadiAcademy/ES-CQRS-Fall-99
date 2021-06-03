@@ -11,7 +11,8 @@ namespace Framework.Domain
         {
             var aggregate = (T)Activator.CreateInstance(typeof(T),true);
 
-            //TODO: apply snapshot
+            if (snapshot != EmptySnapshot.Instance) 
+                aggregate.Apply(snapshot);
 
             foreach (var domainEvent in events)
             {

@@ -10,7 +10,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
+using Framework.Autofac;
 using LoanApplications.Config;
+using LoanApplications.Domain.Contracts;
 using ServiceHost.Conventions;
 
 namespace ServiceHost
@@ -28,6 +30,7 @@ namespace ServiceHost
         }
         public void ConfigureContainer(ContainerBuilder builder)
         {
+            builder.RegisterModule(new FrameworkModule(typeof(LoanRequested).Assembly));
             builder.RegisterModule(new LoanApplicationsModule());
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

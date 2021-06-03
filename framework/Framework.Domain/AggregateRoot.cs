@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Framework.Domain.Snapshots;
 
 namespace Framework.Domain
 {
@@ -25,5 +26,6 @@ namespace Framework.Domain
         {
             Version++;
         }
+        public virtual void Apply(ISnapshot snapshot) { }
     }
 }
