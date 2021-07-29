@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Framework.Core.Events;
 using LoanApplications.Domain.Contracts;
 using LoanManagement.Projections.Sql.Handlers.Model;

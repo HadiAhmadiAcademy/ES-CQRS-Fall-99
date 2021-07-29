@@ -58,7 +58,7 @@ namespace LoanManagement.Projections.Sql
                         var body = Encoding.UTF8.GetString(@event.OriginalEvent.Data);
                         var domainEvent = (JsonConvert.DeserializeObject(body, type));
                         
-                        await _eventBus.Publish((dynamic)domainEvent);
+                        await _eventBus.Publish((dynamic)domainEvent);      //In-Memory
                     }
                     else
                     {

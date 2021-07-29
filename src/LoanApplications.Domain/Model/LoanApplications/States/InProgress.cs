@@ -5,8 +5,4 @@
         public override bool CanReject() => true;
         public override bool CanAccept() => true;
     }
-
-    internal class Rejected : LoanApplicationState
-    {
-    }
 }

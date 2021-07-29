@@ -26,10 +26,18 @@ namespace LoanApplications.RestApi
             return Ok();
         }
 
-        [HttpPut("{id}/Status")]
-        public IActionResult RejectOrConfirm(long id, string value)
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> Put(Guid id, RejectApplicationCommand command)
+        //{
+        //    await _bus.Dispatch(command);
+        //    return Ok();
+        //}
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(Guid id, AcceptApplicationCommand command)
         {
-            return Ok("Response from put");
+            await _bus.Dispatch(command);
+            return Ok();
         }
     }
 }

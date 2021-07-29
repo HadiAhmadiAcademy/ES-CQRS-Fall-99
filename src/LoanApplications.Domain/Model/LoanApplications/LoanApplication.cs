@@ -14,6 +14,7 @@ namespace LoanApplications.Domain.Model.LoanApplications
         private string _description;
         private string _rejectionReason;
         private LoanApplicationState _state;
+        protected LoanApplication() {}
         public LoanApplication(int applicantId, int payBackMonths, int amount, string description)
         {
             var id = Guid.NewGuid();
