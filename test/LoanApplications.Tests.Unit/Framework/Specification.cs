@@ -55,7 +55,7 @@ namespace LoanApplications.Tests.Unit.Framework
             var actualEvents = Sut.GetUncommittedEvents();
             actualEvents.Should().HaveCount(expectedEvents.Count);
 
-            //expectedEvents.ForEach(a=> actualEvents.ShouldBeHaveEquivalentOfDomainEvent(a));      //TODO: check this out
+            expectedEvents.ForEach(a=> actualEvents.ShouldBeHaveEquivalentOfDomainEvent(a));
         }
 
         protected abstract IEnumerable<DomainEvent> Given();

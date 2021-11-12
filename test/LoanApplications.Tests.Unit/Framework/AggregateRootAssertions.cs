@@ -9,14 +9,15 @@ namespace LoanApplications.Tests.Unit.Framework
 {
     public static class AggregateRootAssertions
     {
-        public static void ShouldBeHaveEquivalentOfDomainEvent<T>(this IReadOnlyList<DomainEvent> target, 
+        public static void ShouldBeHaveEquivalentOfDomainEvent<T>(this IReadOnlyList<T> target, 
             T expectedDomainEvent)
 
             where T : DomainEvent
         {
             target.Should().ContainEquivalentOf(expectedDomainEvent,
                 options =>
-                    options.Excluding(a => a.EventId)
+                    options.IncludingAllRuntimeProperties()
+                        .Excluding(a => a.EventId)
                         .Excluding(a => a.PublishDateTime));
         }
     }
